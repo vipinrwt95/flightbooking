@@ -11,3 +11,335 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.screen {		
+			
+	position: relative;	
+	height: 300px;
+	width: 360px;	
+	box-shadow: 0px 0px 12px #000000;
+}
+
+.screen__content {
+	z-index: 1;
+	position: relative;	
+	height: 100%;
+}
+
+.screen__background {		
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);	
+}
+
+.screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.screen__background__shape1 {
+	height: 520px;
+	width: 520px;
+	background: #FFF;	
+	top: -50px;
+	right: 120px;	
+	border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+	height: 220px;
+	width: 220px;
+	background: #6C63AC;	
+	top: -172px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape3 {
+	height: 540px;
+	width: 190px;
+	background: linear-gradient(270deg, #5D54A4, #6A679E);
+	top: -24px;
+	right: 0;	
+	border-radius: 32px;
+}
+
+.screen__background__shape4 {
+	height: 400px;
+	width: 200px;
+	background: #7E7BB9;	
+	top: 420px;
+	right: 50px;	
+	border-radius: 60px;
+}
+
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 156px;
+}
+
+.login__field {
+	padding: 20px 0px;	
+	position: relative;	
+}
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: #7875B5;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #6A679E;
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #4C489D;
+	box-shadow: 0px 2px 2px #5C5696;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #6A679E;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: #7875B5;
+}
+
+.social-login {	
+	position: absolute;
+	height: 140px;
+	width: 160px;
+	text-align: center;
+	bottom: 0px;
+	right: 0px;
+	color: #fff;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-login__icon {
+	padding: 20px 10px;
+	color: #fff;
+	text-decoration: none;	
+	text-shadow: 0px 0px 8px #7875B5;
+}
+
+.social-login__icon:hover {
+	transform: scale(1.5);	
+}
+.flights-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.flights-list {
+  width:50vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+.flight-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 12px;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.flight-card-admin {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	border-radius: 12px;
+	box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+  }
+  .flight-card-admin:hover{
+	cursor: pointer;
+  }
+
+.flight-card-header {
+  padding: 1rem;
+  background-color: #0077ff;
+  color: #fff;
+}
+
+.flight-card-body {
+  padding: 1rem;
+}
+
+.flight-card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.flight-card p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+.flight-card button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0077ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.flight-card button:hover {
+  background-color: #005ae6;
+}
+
+
+
+.booking-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+
+.booking-popup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-popup label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.booking-popup input {
+  margin-bottom: 15px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* Example CSS for available and unavailable seats */
+
+.flight-seats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15px, 3fr));
+  grid-gap: 30px;
+  justify-items: center;
+  align-items: center;
+}
+
+.flight-seat {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin:35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: not-allowed; /* Default cursor for unavailable seats */
+}
+
+.available {
+  background-color: green; /* Styling for available seats */
+  color: white;
+  cursor: pointer; /* Cursor for available seats */
+}
+
+.unavailable {
+  background-color: red; /* Styling for unavailable seats */
+  color: white;
+}
+.flight-seat-selected{
+ background-color: yellow;
+ color:black;
+}
+
+.booking-popup button {
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.booking-popup button + button {
+  margin-left: 10px;
+}
+
+.blurcontainer {
+  position: relative;
+}
+
+.blur::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+}
