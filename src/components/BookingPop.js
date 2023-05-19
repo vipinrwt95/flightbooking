@@ -2,7 +2,7 @@
 import React,{useRef, useState,useEffect} from "react";
 import {useDispatch,useSelector} from 'react-redux';
 import {updateSeats} from '../store/Flights';
-import {addbooking,delbooking} from '../store/Booking';
+import {addbooking} from '../store/Booking';
 function generateRandomDate() {
     const currentDate = new Date();
     const startDate = new Date();
@@ -29,7 +29,7 @@ const BookingPop=({flight,show})=>{
    
    const [numtixx,setnumtixx]=useState(0);
    //console.log(flight);
-   const [seats,setSeats]=useState(useSelector(state => state.flight.flights[flight.id-1].seats));
+   const seats=useSelector(state => state.flight.flights[flight.id-1].seats);
    //console.log(seats);
    //console.log(flight)
     const email=useSelector(state=>state.auth.email);

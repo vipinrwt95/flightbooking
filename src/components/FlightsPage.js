@@ -16,6 +16,7 @@ function FlightsPage() {
    const dest=useRef();
   const flights = useSelector(state => state.flight.flights);
    const [show,setShowpop]=useState(false);
+   console.log(show);
   const searchHandler = (e) => {
     e.preventDefault();
   

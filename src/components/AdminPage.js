@@ -1,4 +1,4 @@
-import react,{useState,useEffect} from 'react';
+import {useState,useEffect} from 'react';
 import { useSelector,useDispatch } from 'react-redux';
 import {useNavigate} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,7 +10,7 @@ const Flight=({id})=>{
 const flights = useSelector(state => state.flight.flights);
 const [show,setShow]=useState(false);
 console.log(flights);
-let flight=flights.filter(item=>item.id==id)
+let flight=flights.filter(item=>item.id===id)
 const showpop=()=>{
     setShow(prev=>!prev);
 }
@@ -43,12 +43,12 @@ const [bookingstoshow,setbookingstoshow]=useState([]);
 const [today,setToday]=useState(true);
 const [alltime,setalltime]=useState(false);
 const setTimeline=(e)=>{
-   if(e.target.value =='today')
+   if(e.target.value ==='today')
    {
     setToday(true);
     setalltime(false);
    }
-   else if (e.target.value=='all')
+   else if (e.target.value==='all')
    {
     setalltime(true);
     setToday(false);
@@ -106,7 +106,7 @@ return (
       {
           showtixdetails &&  bookingstoshow.map((item)=><div>{item.tickets} by {item.email}</div>)  
         } </>}
-        {bookingstoshow.length==0 && <h6>No tickets booked</h6>}
+        {bookingstoshow.length===0 && <h6>No tickets booked</h6>}
     </div> }
     {alltime && <div>
         <h4> Total Tickets :   {totaltix}</h4>
